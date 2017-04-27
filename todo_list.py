@@ -30,10 +30,18 @@ def display_main_menu(my_list):
     B. View list
     C. Quit the program
     >>> """
+    print user_options
 
     while True:
-        # Collect input and include your if/elif/else statements here.
-        break
+        user_input = raw_input("type your option?")
+        if user_input == 'A':
+            add_to_list(my_list)
+        elif user_input == 'B':
+            view_list(my_list) 
+        elif user_input == 'C':
+            break
+        else:
+            print user_options
 
 #-------------------------------------------------
 
