@@ -11,8 +11,9 @@ You can run the script in your Terminal at any time using the command:
 
 def add_to_list(my_list):
     """Takes user input and adds it as a new item to the end of the list."""
-
-    print "The add_to_list function has not yet been written"
+    item = raw_input('What do you want to add to your to do list?')
+    my_list.append(item)
+    print my_list
 
 
 def view_list(my_list):
@@ -33,7 +34,7 @@ def display_main_menu(my_list):
     print user_options
 
     while True:
-        user_input = raw_input("type your option?")
+        user_input = raw_input("type your option?").upper()
         if user_input == 'A':
             add_to_list(my_list)
         elif user_input == 'B':
