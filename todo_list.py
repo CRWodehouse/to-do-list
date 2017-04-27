@@ -13,13 +13,13 @@ def add_to_list(my_list):
     """Takes user input and adds it as a new item to the end of the list."""
     item = raw_input('What do you want to add to your to do list?')
     my_list.append(item)
-    print my_list
+    
 
 
 def view_list(my_list):
     """Print each item in the list."""
-
-    print "The view_list function has not yet been written"
+    for item in my_list:    
+        print item
 
 
 def display_main_menu(my_list):
@@ -31,9 +31,9 @@ def display_main_menu(my_list):
     B. View list
     C. Quit the program
     >>> """
-    print user_options
 
     while True:
+        print user_options
         user_input = raw_input("type your option?").upper()
         if user_input == 'A':
             add_to_list(my_list)
@@ -42,7 +42,7 @@ def display_main_menu(my_list):
         elif user_input == 'C':
             break
         else:
-            print user_options
+            print "Make a valid choice"
 
 #-------------------------------------------------
 
